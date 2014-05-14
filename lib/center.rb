@@ -10,6 +10,7 @@ class Center
     line_middle = max_length/2
     output = ""
     @input.each_line do |line|
+      line = line.strip + "\n"
       whitespace_amount = line_middle - ((line.length - 1)/2)
       whitespace = " " * whitespace_amount
       new_line = whitespace + line

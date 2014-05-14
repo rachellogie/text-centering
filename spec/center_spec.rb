@@ -21,4 +21,21 @@ INPUT
 
     expect(actual).to eq expected
   end
+
+  it 'centers uneven text on the page' do
+    input = <<INPUT
+   22
+12345
+INPUT
+
+    actual = Center.new(input).center_it
+
+
+    expected = <<INPUT
+ 22
+12345
+INPUT
+
+    expect(actual).to eq expected
+  end
 end
